@@ -40,7 +40,7 @@ body {
 
 a{
     text-decoration: none;
-    color: var(--ink);
+    color: (var(--ink));
 }
 
 img{
@@ -175,16 +175,24 @@ header h1 {
             
             text-align: center;
             padding: 20px 0;
-        }   
+            
+        } 
+        .section_title{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            
+            
+        }  
     /* Background */
-        .bg-brand-color{
+       .bg-brand-color{
             background-color: var(--brand);
             color: #fff;
         }
-        .bg-ink{
-            background: var(--ink);
-            color: #fff;
-        }
+
+        
+        
             
 /* Testimonials Section */
         
@@ -200,7 +208,10 @@ header h1 {
             display: grid;
             grid-template-columns: repeat(3,1fr);
             gap: 30px;
-
+        }
+        .bg-ink{
+            background-color: var(--ink);
+            color: #fff;
         }
 
 /*card*/
