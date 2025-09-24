@@ -12,8 +12,6 @@ description: [css styling for all pages]
 
 */
 
-
-
 :root {
     --ink: #222;
     --muted: #555;
@@ -108,6 +106,14 @@ nav a {
 nav li {
     list-style: none;
 }
+
+nav a.active {
+    background: var(--brand);
+    color: white;
+    border-radius: 6px;
+    padding: 0.7rem 1.1rem;
+}
+
 
 main {
     max-width: fit-content;
@@ -242,6 +248,12 @@ footer span{
     }
 }
 
+.slogan {
+    font-size: medium;
+    color: var(--muted);
+    margin-top: 4%;
+}
+
 /*hero section of homepage*/
     
     /* This is the background image/banner of the hero section*/
@@ -265,13 +277,25 @@ footer span{
         text-align: left;
        
     }
+
+    .hero_desc {
+        max-width: 60ch;
+        word-wrap: break-word;
+    }
     .hero_text1{
         font-size: 1.5rem;
         line-height: 1.2;
         font-weight: 150;
         margin: 40px 0 20px;
         text-align: left;
-        
+        max-width: 40ch;
+        word-wrap: break-word;
+    }
+
+    .hero-buttons a:hover {
+        background-color: var(--ink);
+        color: #fafafa;
+        transition: 0.5s ease;
     }
 /* Apply banner */
     .apply-banner{
