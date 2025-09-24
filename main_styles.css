@@ -114,8 +114,11 @@ nav a.active {
     padding: 0.7rem 1.1rem;
 }
 
-
-main {
+#home-main {
+    width: 100%;
+    padding:0%
+}
+#jobs-main {
     max-width: fit-content;
     margin: auto;
     padding: 1rem;
