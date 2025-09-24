@@ -204,7 +204,19 @@ footer span{
 }
 
 .logo-title {
-    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-title h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.logo-icon {
+    width: 250px;
+    height: auto;
 }
 
 /*hero section of homepage*/
