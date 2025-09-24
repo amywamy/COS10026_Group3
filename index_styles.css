@@ -48,7 +48,6 @@ img{
     height: auto;
 }
 
-
 /*Utility classes */
 
 .container {
@@ -56,6 +55,14 @@ img{
     margin: 0 auto;
     padding-inline: 1rem;
 }
+
+.container_mid{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-inline: 1rem;
+}
+
+
 
 header {
     border-bottom: 1px solid var(--line);
@@ -174,16 +181,13 @@ header h1 {
             background-color: var(--brand);
             color: #fff;
         }
-            
-/* Testimonials Section */
-
-/*card*/
         .bg-ink{
             background: var(--ink);
             color: #fff;
         }
+            
+/* Testimonials Section */
         
-
         .testimonials{
             padding:40px 0;
         }
@@ -198,6 +202,14 @@ header h1 {
 
         }
 
+/*card*/
+
+.card{
+    background: #fff;
+    color: var(--ink);
+    border-radius: 10px;
+    padding: 20px;
+}
 
 
 
