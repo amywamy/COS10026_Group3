@@ -379,36 +379,27 @@ padding: 20px;
 }
 
 /* Team photo styling */
-.team-photo {
-    text-align: center;
+.team-layout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: flex;
+}
+.team-layout .team-photo {
+    flex: 1 1 360px;
+    max-width: 400px;
+}
+/* Fun facts table with grid layout */
+.team-layout .facts-grid {
+    flex: 2 1 600px;
 }
 
-.team-photo figure {
-    margin: 2rem 0;
-    padding: 1rem;
-    border: 1px solid var(--line);
-    border-radius: 0.7rem;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.team-photo img {
-    max-width: 100%;
+.team-layout img {
+    width: 100%;
     height: auto;
     border-radius: 0.5rem;
-}
-
-.team-photo figcaption {
-    margin-top: 1rem;
-    font-style: italic;
-    color: var(--muted);
-}
-
-/* Fun facts table with grid layout */
-.facts-grid {
-    display: grid;
-    place-items: center;
-    margin: 2rem 0;
 }
 
 table {
@@ -472,6 +463,14 @@ tbody tr:last-child td {
     td {
         padding: 0.75rem 0.5rem;
     }
+
+    .team-layout {
+        flex-direction: column;
+    }
+
+    .team-layout .team-photo, .team-layout .facts-grid {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 850px) {
@@ -503,9 +502,5 @@ tbody tr:last-child td {
     th,
     td {
         padding: 0.5rem 0.25rem;
-    }
-    
-    .team-photo figure {
-        padding: 0.5rem;
     }
 }
