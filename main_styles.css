@@ -341,3 +341,171 @@ color: var(--ink);
 border-radius: 10px;
 padding: 20px;
 }
+
+/* Contributions section using flexbox */
+.contributions ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+}
+
+.contributions li {
+    background: #fafafa;
+    padding: 1rem;
+    border-left: 4px solid var(--brand);
+    border-radius: 0.5rem;
+}
+
+/* Definition list styling for languages */
+.languages dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    margin: 1rem 0;
+}
+
+.languages dt {
+    font-weight: bold;
+    color: var(--brand);
+}
+
+.languages dd {
+    margin: 0;
+    padding: 0.25rem 0.75rem;
+    background: #fafafa;
+    border-radius: 0.25rem;
+}
+
+/* Team photo styling */
+.team-photo {
+    text-align: center;
+}
+
+.team-photo figure {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 0.7rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.team-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.team-photo figcaption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--muted);
+}
+
+/* Fun facts table with grid layout */
+.facts-grid {
+    display: grid;
+    place-items: center;
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+caption {
+    caption-side: top;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--brand);
+}
+
+th,
+td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+}
+
+th {
+    background: var(--brand);
+    color: #fafafa;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+tbody tr:hover {
+    background: #f0f8ff;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .contributions ul {
+        gap: 0.5rem;
+    }
+    
+    .contributions li {
+        padding: 0.75rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th,
+    td {
+        padding: 0.75rem 0.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: .6rem;
+    }
+    
+    .languages dl {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+    
+    .languages dt {
+        margin-top: 1rem;
+    }
+    
+    .languages dt:first-of-type {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    table {
+        font-size: 0.8rem;
+    }
+    
+    th,
+    td {
+        padding: 0.5rem 0.25rem;
+    }
+    
+    .team-photo figure {
+        padding: 0.5rem;
+    }
+}
