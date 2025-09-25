@@ -6,12 +6,13 @@ author:[Amy Nguyen]
 
 created: [15/09/25]
 
-last modified: [22/09/25]
+last modified: [26/09/25]
 
 description: [css styling for all pages]
 
 */
 
+                                                      /* Variables and Global uses*/
 :root {
     --ink: #222;
     --muted: #555;
@@ -80,13 +81,51 @@ header h1 {
     line-height: 2;
 }
 
-main {
-    padding: var(--space);
-}
-
 header,
 footer {
     padding: var(--space);
+}
+footer a, 
+footer span{
+    flex:1 1 220px;
+    text-align: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-title h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.logo-icon {
+    width: clamp(30px, 6vw, 48px);
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .logo-title {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.slogan {
+    font-size: medium;
+    color: var(--muted);
+    margin-top: 4%;
+}
+
+                                                         /* This is Jobs Page*/
+#jobs-main {
+    padding: var(--space);
+    max-width: fit-content;
+    margin: auto;
+    padding: 1rem;
 }
 
 a {
@@ -112,16 +151,6 @@ nav a.active {
     color: white;
     border-radius: 6px;
     padding: 0.7rem 1.1rem;
-}
-
-#home-main {
-    width: 100%;
-    padding:0%
-}
-#jobs-main {
-    max-width: fit-content;
-    margin: auto;
-    padding: 1rem;
 }
 
 aside {
@@ -222,41 +251,12 @@ details ol {
     margin: .25rem 0 .5rem 1.25rem; 
 }
 
-footer a, 
-footer span{
-    flex:1 1 220px;
-    text-align: center;
-}
 
-.logo-title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+                                                        /* This is Home Page*/
+#home-main {
+    width: 100%;
+    padding:0%
 }
-
-.logo-title h1 {
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.logo-icon {
-    width: clamp(30px, 6vw, 48px);
-    height: auto;
-}
-
-@media (max-width: 600px) {
-    .logo-title {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.slogan {
-    font-size: medium;
-    color: var(--muted);
-    margin-top: 4%;
-}
-
 /*hero section of homepage*/
     
     /* This is the background image/banner of the hero section*/
@@ -341,7 +341,7 @@ color: var(--ink);
 border-radius: 10px;
 padding: 20px;
 }
-
+                                                        /* This is About Page*/
 /*main container for about page*/
 #about-main {
     display: flex;
