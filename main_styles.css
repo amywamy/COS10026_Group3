@@ -342,167 +342,153 @@ border-radius: 10px;
 padding: 20px;
 }
 
-/* Contributions section using flexbox */
-.contributions ul {
+/*main container for about page*/
+#about-main {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
-    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
 }
 
-.contributions li {
-    background: #fafafa;
-    padding: 1rem;
-    border-left: 4px solid var(--brand);
-    border-radius: 0.5rem;
+.team-title {
+    width: 100%;
+    text-align: center;
+    text-decoration: solid;
+    margin-bottom: 2rem;
 }
 
-/* Definition list styling for languages */
+.team-title h1 {
+    font-size: 1.5rem;
+    color: #0645ad;
+    border-bottom: 3px solid #005ba0;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.left-column {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.left-column h2 {
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+    color: #003366;
+}
+
+.right-column {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.right-column h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #003366;
+    text-align: center;
+}
+
+#about-aside {
+    float: none;
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
 .languages dl {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 150px 1fr;
     gap: 0.5rem 1rem;
     margin: 1rem 0;
+    margin-left: 1rem;
 }
 
 .languages dt {
     font-weight: bold;
-    color: var(--brand);
+    color: #005baa;
 }
 
 .languages dd {
     margin: 0;
-    padding: 0.25rem 0.75rem;
-    background: #fafafa;
-    border-radius: 0.25rem;
+    color: #333;
 }
 
-/* Team photo styling */
-.team-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: flex;
-    max-width: 100%;
-    padding-right: 3rem;
-}
-.team-layout .team-photo {
-    flex: 1 1 360px;
-    max-width: 400px;
-}
-/* Fun facts table with grid layout */
-.team-layout .facts-grid {
-    flex: 2 1 600px;
-}
-
-.team-layout img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
+ul ul {
+    margin-left: 1.5rem;
+    list-style-type: circle;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background: #fff;
-    border: 1px solid var(--line);
-    border-radius: 0.7rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 1rem;
 }
 
-caption {
+table caption {
     caption-side: top;
     padding: 1rem;
     font-weight: bold;
     font-size: 1.1rem;
     color: var(--brand);
-}
-
-th,
-td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid var(--line);
+    text-align: center;
 }
 
 th {
-    background: var(--brand);
-    color: #fafafa;
-    font-weight: bold;
+    background-color: #005baa;
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
 }
 
-tbody tr:nth-child(even) {
-    background: #fafafa;
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
 }
 
-tbody tr:hover {
-    background: #f0f8ff;
+tr:hover {
+    background-color: #eef6ff;
 }
 
-tbody tr:last-child td {
-    border-bottom: none;
+figure {
+    margin-top: 2rem;
+    text-align: center;
 }
 
-/* Responsive design */
-@media (max-width: 900px) {
-    .contributions ul {
-        gap: 0.5rem;
-    }
-    
-    .contributions li {
-        padding: 0.75rem;
-    }
-    
-    table {
-        font-size: 0.9rem;
-    }
-    
-    th,
-    td {
-        padding: 0.75rem 0.5rem;
-    }
+figure img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
 
-    .team-layout {
+figcaption {
+    font-style: italic;
+    font-size: medium;
+    margin-top: 0.6rem;
+    color: #333;
+}
+
+@media screen and (max-width: 786px) {
+    #about-main {
         flex-direction: column;
+        padding: 1rem;
     }
 
-    .team-layout .team-photo, .team-layout .facts-grid {
-        max-width: 100%;
+    .left-column, 
+    .right-column {
+        flex: 1 1 100%;
     }
-}
 
-@media (max-width: 850px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        row-gap: .6rem;
+    .team-title h1 {
+        font-size: 2rem;
     }
-    
-    .languages dl {
-        grid-template-columns: 1fr;
-        gap: 0.25rem;
-    }
-    
-    .languages dt {
-        margin-top: 1rem;
-    }
-    
-    .languages dt:first-of-type {
-        margin-top: 0;
-    }
-}
 
-@media (max-width: 600px) {
-    table {
-        font-size: 0.8rem;
-    }
-    
-    th,
-    td {
-        padding: 0.5rem 0.25rem;
+    th, td {
+        font-size: 0.7rem;
     }
 }
