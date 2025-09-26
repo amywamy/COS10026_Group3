@@ -12,7 +12,7 @@ description: [css styling for all pages]
 
 */
 
-                                                      /* Variables and Global uses*/
+                                                      /* Variables and Global uses - Amy*/
 :root {
     --ink: #222;
     --muted: #555;
@@ -20,7 +20,7 @@ description: [css styling for all pages]
     --brand: #05a;
     --space: clamp(0.75rem, 1.2vw + 0.25rem, 1.25rem);
 }
-
+/*html page seetings*/ 
 html,
 body {
     margin: 0%;
@@ -35,7 +35,8 @@ body {
     margin: 0 auto;
     padding-inline: 1rem;
 }
-
+/*header seetings*/
+    
 header {
     border-bottom: 1px solid var(--line);
     background: #fff;
@@ -49,7 +50,7 @@ header {
     gap: 1rem;
     min-height: 70px;
 }
-
+/*header navigation*/
 .header nav{
     flex:1;
     overflow-x: auto;
@@ -90,7 +91,7 @@ footer span{
     flex:1 1 220px;
     text-align: center;
 }
-
+/*logo seetings*/
 .logo-title {
     display: flex;
     align-items: center;
@@ -106,21 +107,22 @@ footer span{
     width: clamp(30px, 6vw, 48px);
     height: auto;
 }
-
+/*responsive*/
 @media (max-width: 600px) {
     .logo-title {
         flex-direction: column;
         align-items: center;
     }
 }
-
+/*team-slogan*/
 .slogan {
     font-size: medium;
     color: var(--muted);
     margin-top: 4%;
 }
 
-                                                         /* This is Jobs Page*/
+                                                         /* This is Jobs Page - Amy*/
+/*settings for main in jobs page*/                                                         
 #jobs-main {
     padding: var(--space);
     max-width: fit-content;
@@ -152,7 +154,7 @@ nav a.active {
     border-radius: 6px;
     padding: 0.7rem 1.1rem;
 }
-
+/*aside banner settings*/
 aside {
     width: 25%;
     float: right;
@@ -187,7 +189,7 @@ article + article {
     font-size: 1rem;
     margin: .3rem 0 .9rem;
 }
-
+/*badge display*/
 .badge {
     display: inline-block;
     background-color: var(--brand);
@@ -202,7 +204,7 @@ h2,
 h3 {
     scroll-margin-top: 7rem;
 }
-
+/*responsive*/
 @media (max-width: 900px) {
     aside {
         float: none;
@@ -218,7 +220,7 @@ h3 {
         row-gap: .6rem;
     }
 }
-
+/*hidden skip link*/
 .visually-hidden {
     position: absolute;
     left: -999px;
@@ -227,7 +229,7 @@ h3 {
     height: 1px;
     overflow: hidden;
 }
-
+/*collapsible container*/
 details.collapsible {
     border: 1px solid var(--line);
     border-radius: .7rem;
@@ -252,7 +254,7 @@ details ol {
 }
 
 
-                                                        /* This is Home Page*/
+                                                        /* This is Home Page - Nithya */
 #home-main {
     width: 100%;
     padding:0%
@@ -341,7 +343,7 @@ color: var(--ink);
 border-radius: 10px;
 padding: 20px;
 }
-                                                        /* This is About Page*/
+                                                        /* This is About Page - Sanvidu*/
 /*main container for about page*/
 #about-main {
     display: flex;
@@ -492,3 +494,111 @@ figcaption {
         font-size: 0.7rem;
     }
 }
+
+                                                        /* This is Apply Page - Sarah*/
+/* Main heading */
+h1 {
+    text-align: center;
+    margin: 2rem 0 1.5rem;
+    font-size: 1.6rem;
+    color: #222;
+  }
+  
+  /* Form container */
+  form {
+    max-width: 800px;
+    background: #fff;
+    margin: 0 auto 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Fieldsets */
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: #fafafa;
+  }
+  
+  legend {
+    font-weight: bold;
+    padding: 0 8px;
+    color: #116ce2;
+  }
+  
+  /* Labels and inputs */
+  label {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  #other_skills_container {
+      display: none;
+  }
+   
+  #other_skills_checkbox:checked ~ #other_skills_container{
+      display:block;
+       
+  }
+  
+  
+  /* Radio and checkboxes */
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* Buttons */
+  input[type="submit"],
+  input[type="reset"] {
+    background: #6c8cff;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background: #3744ff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  
+    form {
+      padding: 1.5rem;
+    }
+  }
