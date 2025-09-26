@@ -575,7 +575,7 @@ h1 {
   /* Buttons */
   input[type="submit"],
   input[type="reset"] {
-    background: #6c8cff;
+    background: #003366;
     color: #fff;
     border: none;
     padding: 0.7rem 1.5rem;
@@ -588,7 +588,7 @@ h1 {
   
   input[type="submit"]:hover,
   input[type="reset"]:hover {
-    background: #3744ff;
+    background: #002244;
   }
   
   /* Responsive */
